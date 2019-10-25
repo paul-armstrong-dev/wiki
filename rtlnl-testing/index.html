@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Testing in Python - All Dev Notes</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">All Dev Notes</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting overviews <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../sort/shell_sort/">Shell Sort</a>
+</li>
+                                    
+<li >
+    <a href="../sort/medium/sorting/">Medium</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../user-guide/writing-your-docs.md">Writing your docs</a>
+</li>
+                                    
+<li >
+    <a href="../user-guide/styling-your-docs.md">Styling your docs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../about/license.md">License</a>
+</li>
+                                    
+<li >
+    <a href="../about/release-notes.md">Release Notes</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#testing-in-python">Testing in Python</a></li>
+            <li><a href="#unit-tests">Unit Tests</a></li>
+            <li><a href="#integration-tests">Integration Tests</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="testing-in-python">Testing in Python</h1>
+<p>There are several ways of doing testing in Python and choosing the right one it's a tricky job. There are some assumptions that we need make in order to be able to standardize the way we can create and run tests both locally and in the CI/CD.</p>
+<p>We can split this subject in subsections:</p>
+<ol>
+<li>Unit Tests</li>
+<li>Integration Tests</li>
+</ol>
+<h2 id="unit-tests">Unit Tests</h2>
+<p>The most basic type of test. This is what the code-coverage in general they count. Becuase the unit test will evaluate a particular function , the code coverage is able to identify which part of the code in the function is being executed.
+Testing single functions is not as easy as it seems. It all depends how the code has been designed and without proper usage of the <a href="https://itnext.io/solid-principles-explanation-and-examples-715b975dcad4">SOLID</a> principles, we are not able to create tests.</p>
+<p>Let's assume that the code is actually testable. The Python Standard Library comes with a <code>unittest</code> package that helps the developer in writing tests. <code>unittest</code> contains both a <code>testing framework</code> and a <code>test runner</code>. <code>unittest</code> has some important requirements for writing and executing tests. More information about this package can be found in the <a href="https://docs.python.org/3/library/unittest.html">official documentation</a>.</p>
+<p><code>unittest</code> requires that:</p>
+<ul>
+<li>You put your tests into classes as methods</li>
+<li>You use a series of special assertion methods in the <code>unittest.TestCase</code> class instead of the built-in <code>assert</code> statement</li>
+</ul>
+<p>In your code you need to:</p>
+<ul>
+<li>Import <code>unittest</code> from the standard library</li>
+<li>Create a class called <code>TestSomething</code> that inherits from the <code>TestCase</code> class</li>
+<li>Convert the test functions into methods by adding self as the first argument</li>
+<li>Use the entry point to call <code>unittest.main()</code></li>
+</ul>
+<p>Let's take a look at this example:</p>
+<pre><code class="python">import unittest
+
+
+class TestSum(unittest.TestCase):
+
+    def test_sum(self):
+        self.assertEqual(sum([1, 2, 3]), 6, &quot;Should be 6&quot;)
+
+    def test_sum_tuple(self):
+        self.assertEqual(sum((1, 2, 2)), 6, &quot;Should be 6&quot;)
+
+if __name__ == '__main__':
+    unittest.main()
+</code></pre>
+
+<p>Assuming that the above code is in a file called <code>test_sum.py</code>, we can run the tests with simply cally <code>python test_sum.py</code>. Test files can be put in a separate folder called <code>tests</code> at root level. Because your code should be able to be called from anywhere since it's in a package, having all the tests in one place makes it easy to work on them. Since we also have different type of tests, we shoudl put the unit tests in a folder called <code>unit</code>. See the tree below as example:</p>
+<pre><code class="bash">project/
+│
+├── my_app/
+│   └── __init__.py
+│
+└── tests/
+    |
+    ├── unit/
+    |   ├── __init__.py
+    |   └── test_sum.py
+    |
+    └── integration/
+        ├── __init__.py
+        └── test_integration.py
+
+</code></pre>
+
+<h3 id="test-discovery">Test Discovery</h3>
+<p>This is an important step especially when you have multiple test files. We don't want to run tests one by one, but we want to run all of them in one single command. Test Discovery is a functionality that will automatically run all the tests that is in the code base. In order to make it possible, we need to respect the following rule:</p>
+<ul>
+<li>All of the test files must be modules or packages (including namespace packages) importable from the top-level directory of the project (this means that their filenames must be valid identifiers).</li>
+</ul>
+<p>To run the test discovery, you can execute the following command from the root of your project: <code>python -m unittest discover</code>.</p>
+<h3 id="setup-and-teardown">SetUp and TearDown</h3>
+<p>There are two special functions that can be used in order to initialize some objects that are needed for your tests. <code>setUp()</code> is a special method that is called before the tests in the class are run. This is useful, for example, if you need to upload some data into a testing database in order to check the functionality. Becuase you can initialize things, it's important that you clean them up to avoid inconsistency in your tests.</p>
+<p><code>tearDown()</code> is a special function that is run when all the tests are being executed independently whether they failes or passed. If you <code>raise</code> an exception in your tests, then the function <code>tearDown()</code> won't be called becuase the program exited before completing. Make sure that you are able to handle all the errors in your test and make them <code>fail</code> with appropriate instructions rather then brutally terminate with an exception.</p>
+<p>More information can be found at this <a href="https://docs.python.org/3/library/unittest.html#organizing-test-code">link</a>.</p>
+<h2 id="integration-tests">Integration Tests</h2>
+<p>Integration testing is the testing of multiple components of the application to check that they work together. Integration testing might require acting like a consumer or user of the application by:</p>
+<ul>
+<li>Calling an HTTP REST API</li>
+<li>Calling a Python API</li>
+<li>Calling a web service</li>
+<li>Running a command line</li>
+</ul>
+<p>The most significant difference is that integration tests are checking more components at once and therefore will have more side effects than a unit test. Also, integration tests will require more fixtures to be in place, like a database, a network socket, or a configuration file.</p>
+<p>This is why it’s good practice to separate your unit tests and your integration tests. The creation of fixtures required for an integration like a test database and the test cases themselves often take a lot longer to execute than unit tests, so you may only want to run integration tests before you push to production instead of once on every commit. This can be set it up in the CI/CD because we make the distincion on a folder level.</p>
+<p>Since we are using <code>Docker</code> and <code>docker-compose</code> it's easy to reproduce the "production" environment locally. Hence, by having docker-compose up and running you can write intergation tests exaclty like the unit tests explained above. The difference is that you may call the "upper most" function and wait for the result to verify that all the components are working together. That's the goal of Integration Tests.</p>
+<p>There are no particular libraries to use. The Standard Library is sufficient to cover all the type of tests.</p>
+<h3 id="concourse-ci">Concourse CI</h3>
+<p>Currently we are investigating how to run multiple components in our CI system so that we can run integration tests when merging to master and before going to production.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
