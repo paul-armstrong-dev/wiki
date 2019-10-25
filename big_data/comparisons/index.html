@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Comparisons - All Dev Notes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">All Dev Notes</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting overviews <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../sort/shell_sort/">Shell Sort</a>
+</li>
+                                    
+<li >
+    <a href="../../sort/medium/sorting/">Medium</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../user-guide/writing-your-docs.md">Writing your docs</a>
+</li>
+                                    
+<li >
+    <a href="../../user-guide/styling-your-docs.md">Styling your docs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../about/license.md">License</a>
+</li>
+                                    
+<li >
+    <a href="../../about/release-notes.md">Release Notes</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#hadoop-vs-spark">Hadoop vs Spark</a></li>
+            <li><a href="#hadoop">Hadoop</a></li>
+            <li><a href="#spark">Spark</a></li>
+        <li class="main "><a href="#comparison">Comparison</a></li>
+            <li><a href="#key-differences-between-hadoop-vs-spark">Key differences between Hadoop vs Spark</a></li>
+            <li><a href="#hadoop-vs-sql">Hadoop vs SQL</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<hr />
+<h2 id="hadoop-vs-spark">Hadoop vs Spark</h2>
+<h4 id="hadoop">Hadoop</h4>
+<p><strong>Hadoop is an open-source framework that allows to store and process big data, in a distributed environment across clusters of computers.</strong> 
+- Hadoop is designed to scale up from a single server to thousands of machines, where every machine is offering local computation and storage. 
+- Hadoop is a registered trademark of the Apache software foundation. 
+- It utilizes a simple programming model to perform the required operation among clusters. 
+- All modules in Hadoop are designed with a fundamental assumption that hardware failures are common occurrences and should be dealt with by the framework.
+- It runs the application using the MapReduce algorithm, where data is processed in parallel on different CPU nodes. 
+    - In other words, the Hadoop framework is capable enough to develop applications, which are further capable of running on clusters of computers and they could perform a complete statistical analysis for a huge amount of data.
+- The core of Hadoop consists of: 
+    - <strong>Storage</strong>
+        - Known as <strong>Hadoop Distributed File System</strong> 
+    - <strong>Processing</strong> 
+        - Known as the <strong>MapReduce programming model</strong>. 
+- Hadoop basically split files into the large blocks and distribute them across the clusters, transfer package code into nodes to process data in parallel.
+- This approach dataset to be processed faster and more efficiently. 
+- Other Hadoop modules are: 
+    - <strong>Hadoop common</strong>, which is a bunch of Java libraries and utilities returned by Hadoop modules. 
+        - These libraries provide a file system and operating system level abstraction, also contain required Java files and scripts to start Hadoop. 
+    - <strong>Hadoop Yarn</strong> is also a module, which is being used for job scheduling and cluster resource management.</p>
+<hr />
+<h4 id="spark">Spark</h4>
+<p><strong>Spark is an open-source cluster computing designed for fast computation.</strong> 
+- It provides an interface for programming entire clusters with implicit data parallelism and fault tolerance. 
+- The main feature of Spark is in-memory cluster computing that increases the speed of an application.
+- Spark was built on the top of Hadoop MapReduce module and it extends the MapReduce model to efficiently use more type of computations which include Interactive Queries and Stream Processing. 
+- Spark was introduced by the Apache software foundation, to speed up the Hadoop computational computing software process.
+- Spark has its own cluster management and is not a modified version of Hadoop. 
+- Spark utilizes Hadoop in two ways: 
+    1. storage 
+    2. processing. 
+- Since cluster management is arriving from Spark itself, it uses Hadoop for storage purposes only.
+- Spark is one of the Hadoop’s subprojects which was developed in 2009, and later it became open source under a BSD license. 
+- It has lots of wonderful features, by modifying certain modules and incorporating new modules. 
+- It helps run an application in a Hadoop cluster, multiple times faster in memory.
+- This is made possible by reducing the number of read/write operations to disk. 
+    - It stores the intermediate processing data in memory, saving read/write operations. 
+- Spark also provides built-in APIs in Java, Python or Scala. 
+    - Thus, one can write applications in multiple ways.
+- Spark not only provides a Map and Reduce strategy but also support SQL queries, Streaming data, Machine learning and Graph Algorithms.</p>
+<hr />
+<h2 id="comparison">Comparison</h2>
+<h4 id="key-differences-between-hadoop-vs-spark">Key differences between Hadoop vs Spark</h4>
+<ul>
+<li>Both Hadoop vs Spark are popular choices in the market; </li>
+<li>let us discuss some of the major Difference Between Hadoop and Spark:<ol>
+<li>Hadoop is an open source framework which uses a MapReduce algorithm <ul>
+<li>Spark is lightning fast cluster computing technology, which extends the MapReduce model to efficiently use with more type of computations.</li>
+</ul>
+</li>
+<li>Hadoop’s MapReduce model reads and writes from a disk, thus slow down the processing speed <ul>
+<li>Spark reduces the number of read/write cycles to disk and store intermediate data in-memory, hence faster-processing speed.</li>
+</ul>
+</li>
+<li>Hadoop requires developers to hand code each and every operation <ul>
+<li>Spark is easy to program with RDD – Resilient Distributed Dataset.</li>
+</ul>
+</li>
+<li>Hadoop MapReduce model provides a batch engine, hence dependent on different engines for other requirements <ul>
+<li>Spark performs batch, interactive, Machine Learning and Streaming all in the same cluster.</li>
+</ul>
+</li>
+<li>Hadoop is designed to handle batch processing efficiently <ul>
+<li>Spark is designed to handle real-time data efficiently.</li>
+</ul>
+</li>
+<li>Hadoop is a high latency computing framework, which does not have an interactive mode <ul>
+<li>Spark is a low latency computing and can process data interactively.</li>
+</ul>
+</li>
+<li>With Hadoop MapReduce, a developer can only process data in batch mode only <ul>
+<li>Spark can process real-time data through Spark Streaming.</li>
+</ul>
+</li>
+<li>Hadoop is designed to handle faults and failures, it is naturally resilient toward faults, hence a highly fault-tolerant system <ul>
+<li>with Spark, RDD allows recovery of partitions on failed nodes.</li>
+</ul>
+</li>
+<li>Hadoop needs an external job scheduler for example – Oozie to schedule complex flows <ul>
+<li>Spark has in-memory computation, so it has its own flow scheduler.</li>
+</ul>
+</li>
+<li>Hadoop is a cheaper option available while comparing it in terms of cost <ul>
+<li>Spark requires a lot of RAM to run in-memory, thus increasing the cluster and hence cost.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Hadoop</th>
+<th>Spark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Category</td>
+<td>Basic Data processing engine</td>
+<td>Data analytics engine</td>
+</tr>
+<tr>
+<td>Usage</td>
+<td>Batch processing with a huge volume of data</td>
+<td>Process real-time data, from real-time events like Twitter, Facebook</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>High latency computing</td>
+<td>Low latency computing</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>Process data in batch mode</td>
+<td>Can process interactively</td>
+</tr>
+<tr>
+<td>Ease of use</td>
+<td>Hadoop’s MapReduce model is complex, need to handle low-level APIs</td>
+<td>Easier to use, abstraction enables a user to process data using high-level operators</td>
+</tr>
+<tr>
+<td>Scheduler</td>
+<td>External job scheduler is required</td>
+<td>In-memory computation, no external scheduler required</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Highly secure</td>
+<td>Less secure as compare to Hadoop</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Less costly since MapReduce model provide a cheaper strategy</td>
+<td>Costlier than Hadoop since it has an in-memory solution</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="hadoop-vs-sql">Hadoop vs SQL</h3>
+<table>
+<thead>
+<tr>
+<th>Hadoop</th>
+<th>SQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It can be used for storing, processing, retrieving and pattern extraction from data across a wide range of formats.</td>
+<td>It can be used for storage, processing, retrieval and pattern mining of data stored in a relational database format only</td>
+</tr>
+<tr>
+<td>It works well for structured and unstructured data.</td>
+<td>It works only for structured data only</td>
+</tr>
+<tr>
+<td>It can many technology stacks on top of it each doing a specific task like HDFS, AVRO, Pig, HBase etc.</td>
+<td>SQL is a query language with specific syntax and a scheme to get around with things</td>
+</tr>
+<tr>
+<td>Data can be stored in the form of key-value pairs, tables, hash map etc.</td>
+<td>Data is stored in the form of tables only</td>
+</tr>
+<tr>
+<td>It supports NoSQL type data structures, columnar data structures etc. like MongoDB</td>
+<td>It works on the property of ACID</td>
+</tr>
+<tr>
+<td>It can be used to store and process log data, real-time data, images, videos, sensor data and other variety of data.</td>
+<td>Data variety is severely restricted in SQL</td>
+</tr>
+<tr>
+<td>Hadoop is used mainly in those applications where data volume is huge and systems like SQL cannot perform well.</td>
+<td>SQL can store a moderate volume of data</td>
+</tr>
+<tr>
+<td>INSERT, SELECT type statements are very fast in Hadoop compared to SQL</td>
+<td>SQL syntax are much slower when executed on millions of rows at a time</td>
+</tr>
+<tr>
+<td>Hadoop uses the concept of distributed computing, applies the principle of map-reduce and thus handle data available on multiple systems across multiple locations.</td>
+<td>SQL data sources are usually available on-premise or on a cloud. Thus it cannot exploit the advantages of distributed computing</td>
+</tr>
+<tr>
+<td>Hadoop based systems can be easily and cost-effectively scaled. Horizontal scaling is very cheap and as many computers can be connected to the network as desired thus it is scalable on demand.</td>
+<td>Buying an additional SQL server costs a fortune. If a system runs out of storage, additional racks and servers need to be purchased and configured which is expensive and time-consuming</td>
+</tr>
+<tr>
+<td>It is highly faulted tolerant.</td>
+<td>It has good fault tolerance</td>
+</tr>
+<tr>
+<td>It uses commodity hardware.</td>
+<td>It uses propriety hardware</td>
+</tr>
+<tr>
+<td>It is a free and open source.</td>
+<td>Most of the SQL systems are licensed</td>
+</tr>
+<tr>
+<td>Advanced machine learning and artificial intelligence techniques can be build using Hadoop.</td>
+<td>Support for ML and AI is highly limited on SQL and only a few companies provide that</td>
+</tr>
+<tr>
+<td>Using appropriate JDBC connectors, Hadoop can communicate with SQL systems and move data in between.</td>
+<td>SQL systems can also read and write data to Hadoop infrastructure</td>
+</tr>
+<tr>
+<td>Cloudera, Horton work, AWS are some of the providers of Hadoop systems.</td>
+<td>Microsoft, Oracle, SAP etc. are some of the well-known industry leaders in SQL systems</td>
+</tr>
+<tr>
+<td>Last but not the least, the learning curve of Hadoop for entry-level professionals, as well as a seasoned professional, is moderately hard.</td>
+<td>Starting with SQL systems is much easier for even entry-level professionals</td>
+</tr>
+</tbody>
+</table>
+<hr /></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
