@@ -1,0 +1,45 @@
+### Sorts
+
+- Comparison sorts‎ (30 P)
+    - A comparison sort is a particular type of sorting algorithm which can only read the list elements through a single abstract comparison operation (often a "less than" operator) that determines which of two elements should occur first in the final sorted list.
+        - Adaptive heap sort
+        - Block sort
+        - Bogosort
+        - Bubble sort
+        - Cache-oblivious distribution sort
+        - Cascade merge sort
+        - Cocktail shaker sort
+        - Comb sort
+        - Cubesort
+        - Cycle sort
+        - Funnelsort
+        - Gnome sort
+        - Heapsort
+        - Insertion sort
+        - Introsort
+        - Library sort
+        - Merge sort
+        - Multi-key quicksort
+        - Odd–even sort
+        - Oscillating merge sort
+        - Patience sorting
+        - Polyphase merge sort
+        - Quicksort
+        - Selection sort
+        - Shellsort
+        - Smoothsort
+        - Sorting number
+        - Stooge sort
+        - Timsort
+- Online sorts‎ (6 P)
+- These sorts can start sorting their input without having received all of it, and are therefore classified as online algorithms.
+- Selection algorithms‎ (7 P)
+    - In computer science, a selection algorithm is an algorithm for finding the kth smallest number in a list or array; such a number is called the kth order statistic. This includes the cases of finding the minimum, maximum, and median elements. There are O(n)-time (worst-case linear time) selection algorithms, and sublinear performance is possible for structured data; in the extreme, O(1) for an array of sorted data. Selection is a subproblem of more complex problems like the nearest neighbor and shortest path problems. Many selection algorithms are derived by generalizing a sorting algorithm, and conversely some sorting algorithms can be derived as repeated application of selection.
+        - BFPRT
+        - Floyd–Rivest algorithm
+        - Introselect
+        - Median of medians
+        - Order statistic tree
+        - Quickselect
+- Stable sorts‎ (18 P)
+- String sorting algorithms‎ (4 P)
