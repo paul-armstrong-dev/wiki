@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Pig - All Dev Notes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">All Dev Notes</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting overviews <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../sort/shell_sort/">Shell Sort</a>
+</li>
+                                    
+<li >
+    <a href="../../sort/medium/sorting/">Medium</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../user-guide/writing-your-docs.md">Writing your docs</a>
+</li>
+                                    
+<li >
+    <a href="../../user-guide/styling-your-docs.md">Styling your docs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../about/license.md">License</a>
+</li>
+                                    
+<li >
+    <a href="../../about/release-notes.md">Release Notes</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Difference Between Apache Pig and Apache Hive
+The Apache Pig story begins in the year 2006 when the researcher as Yahoo was struggling with MapReduce Java codes. It was difficult to reuse and maintain code for compilation.  At the same time, they observed that MapReduce users were not comfortable with declarative languages such as SQL. They started to work on new language that was supposed to fit in a sweet spot between the declarative style of SQL, low-level and procedural style of MapReduce. This resulted in the birth of Pig and the first release of Pig came in September 2008 and by end of 2009 about half of the jobs at Yahoo were Pig jobs.</p>
+<p>The Apache Hive story begins in the year 2007 when non-Java Programmer have to struggle while using Hadoop MapReduce. IT professional from database background were facing challenges to work on Hadoop Cluster. Initially, researchers, working at Facebook came up with Hive language. This language was very similar to SQL language. So language was called Hive Query Language (HQL) and later it becomes project of open source Apache Community. After becoming project of Apache Community there was a major development in Apache Hive. Facebook was the first company to come up with Apache Hive.</p>
+<p>Let me explain about Apache Pig vs Apache Hive in more details.</p>
+<p>Introducing Apache Pig vs Apache Hive
+Apache Pig is a platform for analyzing large data sets that consists of a high-level language for expressing data analysis programs, coupled with infrastructure for evaluating these programs. Apache is open source project of Apache Community. Apache Pig provides a simple language called Pig Latin, for queries and data manipulation.</p>
+<p>Pig is being utilized by companies like Yahoo, Google and Microsoft for collecting huge amounts of data sets in the form of click streams, search logs and web crawls.</p>
+<p>Apache Pig provides nested data types like Maps, Tuples, and Bags
+Apache Pig Follows multi-query approach to avoid multiple scans of the datasets.
+Programmers familiar with scripting language prefer Apache Pig
+Pig is easy if you are well aware of SQL
+No need to create schema to work on Apache Pig
+Pig also provides support to major data operations like Ordering, Filters, and Joins
+Apache Pig framework translates Pig Latin into sequences of MapReduce programs</p>
+<p>Apache Hive data warehouse software facilitates reading, writing, and managing large datasets residing in distributed storage using SQL. Apache Hive is an Apache open-source project built on top of Hadoop for querying, summarizing and analyzing large data sets using a SQL-like interface. Apache hive provides the SQL-like language called HiveQL, which transparently convert queries to MapReduce for execution on large datasets stored in Hadoop Distributed File System (HDFS).</p>
+<p>Apache Hive is a Data warehouse Infrastructure.
+Apache Hive is an ETL tool (Extraction-Transformation-Loading)
+Apache hive is similar to SQL
+Apache Hive enables customized mappers and reducers
+Apache Hive increases the schema design flexibility using data serialization and deserialization
+Apache hive is an analytical tool</p>
+<p>Key differences between Apache Pig vs Apache Hive:
+Apache Pig is more faster comparing Apache Hive
+Apache Pig and Apache Hive both runs on top of Hadoop MapReduce
+Apache Pig is best for Structured and Semi-structured while Apache Hive is best for structured data
+Apache Pig is a procedural language while Apache Hive is a declarative language
+Apache Pig supports cogroup feature for outer joins while Apache Hive does not support
+Apache Pig does not have a pre-defined database to store table/ schema while Apache Hive has pre-defined tables/schema and stores its information in a database.
+Apache Pig is also suited for complex and nested data structure while Apache Hive is less suited for complex data
+Researchers and programmers use Apache pig while Data Analysts use Apache Hive
+When to use Apache Pig:
+When you are a programmer and know scripting language
+When you don’t want to create schema while loading
+ETL requirements
+When you are working on client side of the Hadoop cluster
+When you are working on Avro Hadoop file format
+When to use Apache Hive:
+Data warehousing requirements
+Analytical Queries of historical data
+Data Analysis who are familiar with SQL
+While working on structured data
+By Data Analysts
+To visualize and create reports</p>
+<p>Apache Pig vs Apache Hive Comparison Table
+I am discussing major artifacts and distinguishing between Apache Pig and Apache Hive.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Apache Pig</th>
+<th>Apache Hive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Processing</td>
+<td>Apache Pig is High-level data flow language</td>
+<td>Apache Hive is used for batch processing i.e. Online Analytical Processing (OLAP)</td>
+</tr>
+<tr>
+<td>Processing Speed</td>
+<td>Apache Pig has higher latency because of executing MapReduce job in background</td>
+<td>Apache Hive also has higher latency because of executing MapReduce job in background</td>
+</tr>
+<tr>
+<td>Compatibility with Hadoop</td>
+<td>Apache Pig runs on top of MapReduce</td>
+<td>Apache Hive also runs on top of MapReduce</td>
+</tr>
+<tr>
+<td>Definition</td>
+<td>Apache Pig is open source, high-level data flow system that renders you a simple language platform properly known as Pig Latin that can be used for manipulating data and queries.</td>
+<td>Apache Hive is open source and  similar to SQL used for Analytical Queries</td>
+</tr>
+<tr>
+<td>Language Used</td>
+<td>Apache Pig uses procedural data flow language called Pig Latin</td>
+<td>Apache Hive uses a declarative language called HiveQL</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>Apache Pig doesn’t have a concept of schema. You can store data in an alias.</td>
+<td>Apache hive supports Schema for inserting data in tables</td>
+</tr>
+<tr>
+<td>Web Interface</td>
+<td>Apache Pig does not support web Interface</td>
+<td>Apache Hive supports web interface</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Apache Pig is used for Structured and Semi-Structured data</td>
+<td>Apache Hive is used for structured data.</td>
+</tr>
+<tr>
+<td>User Specification</td>
+<td>Apache Pig is used by Researchers and Programmers</td>
+<td>Apache Hive is used by Data Analyst</td>
+</tr>
+<tr>
+<td>Operates On</td>
+<td>Apache Pig operates on Client side of cluster</td>
+<td>Apache hive Operates on Server side of Cluster</td>
+</tr>
+<tr>
+<td>Partition Methods</td>
+<td>There is no concept of Partition in Apache Pig</td>
+<td>Apache Hive supports Sharding features</td>
+</tr>
+<tr>
+<td>File Format</td>
+<td>Apache Pig Supports Avro file format</td>
+<td>Apache hive directly does not support Avro format but can support using “org.apache.hadoop.hive.serde2.avro”</td>
+</tr>
+<tr>
+<td>JDBC / ODBC</td>
+<td>Apache Pig does not support</td>
+<td>Apache hive supports but limited</td>
+</tr>
+<tr>
+<td>Debugging</td>
+<td>It is easy to debug Pig scripts</td>
+<td>We can debug, but it is bit complex</td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

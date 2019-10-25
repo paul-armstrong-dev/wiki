@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>All Dev Notes</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Hadoop - All Dev Notes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,13 +19,13 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -39,26 +39,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">All Dev Notes</a>
+                    <a class="navbar-brand" href="../..">All Dev Notes</a>
                 </div>
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href=".">Home</a>
+                            <li >
+                                <a href="../..">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting overviews <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="sort/shell_sort/">Shell Sort</a>
+    <a href="../../sort/shell_sort/">Shell Sort</a>
 </li>
                                     
 <li >
-    <a href="sort/medium/sorting/">Medium</a>
+    <a href="../../sort/medium/sorting/">Medium</a>
 </li>
                                 </ul>
                             </li>
@@ -67,11 +67,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="user-guide/writing-your-docs.md">Writing your docs</a>
+    <a href="../../user-guide/writing-your-docs.md">Writing your docs</a>
 </li>
                                     
 <li >
-    <a href="user-guide/styling-your-docs.md">Styling your docs</a>
+    <a href="../../user-guide/styling-your-docs.md">Styling your docs</a>
 </li>
                                 </ul>
                             </li>
@@ -80,11 +80,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="about/license.md">License</a>
+    <a href="../../about/license.md">License</a>
 </li>
                                     
 <li >
-    <a href="about/release-notes.md">Release Notes</a>
+    <a href="../../about/release-notes.md">Release Notes</a>
 </li>
                                 </ul>
                             </li>
@@ -96,16 +96,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="disabled">
-                                <a rel="next" >
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="sort/shell_sort/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -114,32 +104,101 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#interviews">Interviews</a></li>
+        <li class="main active"><a href="#hadoop-framework">Hadoop Framework :</a></li>
+            <li><a href="#1-common-utilities">1. Common Utilities:</a></li>
+            <li><a href="#2-hdfs-hadoop-distributed-file-system">2. HDFS: Hadoop Distributed File System</a></li>
+            <li><a href="#3-map-reduce">3. Map Reduce:</a></li>
+            <li><a href="#4-yarn-framework">4. YARN Framework:</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h3 id="interviews">Interviews</h3>
-<hr />
+<h2 id="hadoop-framework">Hadoop Framework :</h2>
+<h5 id="1-common-utilities">1. Common Utilities:</h5>
+<ul>
+<li>Also called the Hadoop common. </li>
+<li>These are nothing but the JAVA libraries, files, scripts, and utilities that are actually required by the other Hadoop components to perform.</li>
+</ul>
+<h5 id="2-hdfs-hadoop-distributed-file-system">2. HDFS: Hadoop Distributed File System</h5>
+<ul>
+<li><strong>Solves the problem of storing big data.</strong> </li>
+<li>Why Hadoop has chosen to incorporate a Distributed file system?</li>
+<li>
+<p>Let’s understand this with an example: </p>
+<ul>
+<li>We need to read  1TB of data and we have one machine with 4 I/O channels each channel having 100MB/s, it took 45 minutes to read the entire data. </li>
+<li>Now the same amount of data is read by 10 machines each with 4 I/O channels each channel having 100MB/s. </li>
+<li>Guess the amount of time it took to read the data? 4.3 minutes. </li>
+</ul>
+</li>
+<li>
+<p>The two main components of HDFS are: </p>
 <ol>
-<li><strong>HackerOne</strong>: <ul>
-<li>Take home assignment today</li>
+<li><strong>NAME NODE.</strong><ul>
+<li>Name node is the master, </li>
+<li>We may have a secondary name node as well in case the primary name node stops working the secondary name node will act as a backup. </li>
+<li>The name node basically maintains and manages the data nodes by storing metadata.</li>
 </ul>
 </li>
-<li><strong>Toggle</strong>: <ul>
-<li>Interview on 01/11</li>
-</ul>
-</li>
-<li><strong>Ebury</strong>: <ul>
-<li>Interview on 04/11</li>
-</ul>
-</li>
-<li><strong>Upstack</strong>: <ul>
-<li>Technical interview on 06/11</li>
+<li><strong>DATA NODE.</strong><ul>
+<li>The data node is the slave which is basically the low-cost commodity hardware. </li>
+<li>We can have multiple data nodes. </li>
+<li>The data node stores the actual data. </li>
+<li>This data node supports the replication factor, suppose if one data node goes down then the data can be accessed by the other replicated data node, therefore, the accessibility of data is improved and loss of data is prevented.</li>
 </ul>
 </li>
 </ol>
-<hr /></div>
+</li>
+</ul>
+<h5 id="3-map-reduce">3. Map Reduce:</h5>
+<ul>
+<li><strong>Solves the problem of processing big data.</strong> </li>
+<li>Let’s understand the concept of map reduces by solving this real-world problem.<ul>
+<li>ABC company wants to calculate its total sales, city wise. </li>
+<li>Now here the hash table concept won’t work because the data is in terabytes, so we will use the Map-Reduce concept.<ul>
+<li>There are two phases: <ol>
+<li>MAP<ul>
+<li>First, we will split the data into smaller chunks called the mappers on the basis of the key/value pair. </li>
+<li>So here the key will be the city name and the value will be total sales. </li>
+<li>Each mapper will get each month’s data which gives a city name and corresponding sales.</li>
+</ul>
+</li>
+<li>REDUCE<ul>
+<li>It will get these piles of data and each reducer will be responsible for North/West/East/South cities. </li>
+<li>So the work of the reducer will be collecting these small chunks and convert into larger amounts (by adding them up) for a particular city. </li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-yarn-framework">4. YARN Framework:</h5>
+<ul>
+<li><strong>It is the middle layer between HDFS and Map Reduce which is responsible for managing cluster resources.</strong></li>
+<li>Yet another resource negotiator.</li>
+<li>The initial version of Hadoop had just two components: Map Reduce and HDFS. <ul>
+<li>Later it was realized that Map Reduce couldn’t solve a lot of big data problems. </li>
+<li>The idea was to take the resource management and job scheduling responsibilities away from the old map-reduce engine and give it to a new component. </li>
+<li>This is how YARN came into the picture. </li>
+</ul>
+</li>
+<li>It is having two key roles to perform: <ol>
+<li><strong>Job Scheduling</strong><ul>
+<li>When a large amount of data is giving for processing, it needs to be distributed and broken down into different tasks/jobs.</li>
+<li>Now the JS decides which job needs to be given the top priority, the time interval between two jobs, dependency among the jobs, checks that there is no overlapping between the jobs running. </li>
+</ul>
+</li>
+<li><strong>Resource management</strong><ul>
+<li>For processing the data and for storing the data we need resources right? </li>
+<li>So the resource manager provides, manages and maintains the resources to store and process the data.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
@@ -147,11 +206,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -219,8 +278,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-10-25 12:55:23
--->

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Wwwi - All Dev Notes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">All Dev Notes</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting overviews <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../sort/shell_sort/">Shell Sort</a>
+</li>
+                                    
+<li >
+    <a href="../../sort/medium/sorting/">Medium</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../user-guide/writing-your-docs.md">Writing your docs</a>
+</li>
+                                    
+<li >
+    <a href="../../user-guide/styling-your-docs.md">Styling your docs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../about/license.md">License</a>
+</li>
+                                    
+<li >
+    <a href="../../about/release-notes.md">Release Notes</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#comparison-sorts">Comparison sorts</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="comparison-sorts">Comparison sorts</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Best</th>
+<th>Average</th>
+<th>Worst</th>
+<th>Memory</th>
+<th>Stable</th>
+<th>Method</th>
+<th>Other notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quicksort</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td></td>
+<td>variation is n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle \log n}\log n on average, worst case space complexity is n; Sedgewick variation is {\displaystyle \log n}\log n worst case.</td>
+<td>Typical in-place sort is not stable; stable versions exist.</td>
+</tr>
+<tr>
+<td>Merge sort</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>n</td>
+<td>A hybrid block merge sort is O(1) mem.</td>
+<td>Yes</td>
+<td>Merging</td>
+</tr>
+<tr>
+<td>In-place merge sort</td>
+<td>—</td>
+<td>—</td>
+<td>{\displaystyle n\log ^{2}n}n\log ^{2}n</td>
+<td>See above, for hybrid, that is {\displaystyle n\log n}n\log n</td>
+<td>1</td>
+<td>Yes</td>
+<td>Merging</td>
+</tr>
+<tr>
+<td>Heapsort</td>
+<td>n</td>
+<td>If all keys are distinct, {\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>1</td>
+<td>No</td>
+<td>Selection</td>
+</tr>
+<tr>
+<td>Insertion sort</td>
+<td>n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>1</td>
+<td>Yes</td>
+<td>Insertion</td>
+<td>O(n + d), in the worst case over sequences that have d inversions.</td>
+</tr>
+<tr>
+<td>Introsort</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle \log n}\log n</td>
+<td>No</td>
+<td>Partitioning &amp; Selection</td>
+<td>Used in several STL implementations.</td>
+</tr>
+<tr>
+<td>Selection sort</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>1</td>
+<td>No</td>
+<td>Selection</td>
+<td>Stable with {\displaystyle O(n)}O(n) extra space or when using linked lists.[9]</td>
+</tr>
+<tr>
+<td>Timsort</td>
+<td>n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>n</td>
+<td>Yes</td>
+<td>Insertion &amp; Merging</td>
+<td>Makes n comparisons when the data is already sorted or reverse sorted.</td>
+</tr>
+<tr>
+<td>Cubesort</td>
+<td>n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>n</td>
+<td>Yes</td>
+<td>Insertion</td>
+<td>Makes n comparisons when the data is already sorted or reverse sorted.</td>
+</tr>
+<tr>
+<td>Shell sort</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>Depends on gap sequence</td>
+<td>Depends on gap sequence;</td>
+<td>best known is {\displaystyle n^{4/3}}{\displaystyle n^{4/3}}</td>
+<td>1</td>
+<td>No</td>
+<td>Insertion</td>
+</tr>
+<tr>
+<td>Bubble sort</td>
+<td>n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>1</td>
+<td>Yes</td>
+<td>Exchanging</td>
+<td>Tiny code size.</td>
+</tr>
+<tr>
+<td>Binary tree sort</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n(balanced)</td>
+<td>n</td>
+<td>Yes</td>
+<td>Insertion</td>
+<td>When using a self-balancing binary search tree.</td>
+</tr>
+<tr>
+<td>Cycle sort</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>1</td>
+<td>No</td>
+<td>Insertion</td>
+<td>In-place with theoretically optimal number of writes.</td>
+</tr>
+<tr>
+<td>Library sort</td>
+<td>n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>n</td>
+<td>Yes</td>
+<td>Insertion</td>
+<td></td>
+</tr>
+<tr>
+<td>Patience sorting</td>
+<td>n</td>
+<td>—</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>n</td>
+<td>No</td>
+<td>Insertion &amp; Selection</td>
+<td>Finds all the longest increasing subsequences in O(n log n).</td>
+</tr>
+<tr>
+<td>Smoothsort</td>
+<td>n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>1</td>
+<td>No</td>
+<td>Selection</td>
+<td>An adaptive variant of heapsort based upon the Leonardo sequence rather than a traditional binary heap.</td>
+</tr>
+<tr>
+<td>Strand sort</td>
+<td>n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>n</td>
+<td>Yes</td>
+<td>Selection</td>
+<td></td>
+</tr>
+<tr>
+<td>Tournament sort</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>n[10]</td>
+<td>No</td>
+<td>Selection</td>
+<td>Variation of Heap Sort.</td>
+</tr>
+<tr>
+<td>Cocktail sort</td>
+<td>n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>1</td>
+<td>Yes</td>
+<td>Exchanging</td>
+<td></td>
+</tr>
+<tr>
+<td>Comb sort</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>1</td>
+<td>No</td>
+<td>Exchanging</td>
+<td>Faster than bubble sort on average.</td>
+</tr>
+<tr>
+<td>Gnome sort</td>
+<td>n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>1</td>
+<td>Yes</td>
+<td>Exchanging</td>
+<td>Tiny code size.</td>
+</tr>
+<tr>
+<td>UnShuffle Sort[11]</td>
+<td>n</td>
+<td>kn</td>
+<td>kn</td>
+<td>In-place for linked lists. n * sizeof(link) for array. n+1 for array?</td>
+<td>No</td>
+<td>Distribution and Merge</td>
+<td>No exchanges are performed. The parameter k is proportional to the entropy in the input. k = 1 for ordered or reverse ordered input.</td>
+</tr>
+<tr>
+<td>Franceschini's method[12]</td>
+<td>—</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>1</td>
+<td>Yes</td>
+<td>?</td>
+<td></td>
+</tr>
+<tr>
+<td>Block sort</td>
+<td>n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>{\displaystyle n\log n}n\log n</td>
+<td>1</td>
+<td>Yes</td>
+<td>Insertion &amp; Merging</td>
+<td>Combine a block-based {\displaystyle O(n)}O(n) in-place merge algorithm[13] with a bottom-up merge sort.</td>
+</tr>
+<tr>
+<td>Odd–even sort</td>
+<td>n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>1</td>
+<td>Yes</td>
+<td>Exchanging</td>
+<td>Can be run on parallel processors easily.</td>
+</tr>
+<tr>
+<td>Curve sort</td>
+<td>n</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle n^{2}}n^{2}</td>
+<td>{\displaystyle \Omega (1)\cap {\mathcal {O}}(n)}{\displaystyle \Omega (1)\cap {\mathcal {O}}(n)}</td>
+<td>Yes</td>
+<td>Insertion &amp; counting</td>
+<td>Adapts to the smoothness of data.</td>
+</tr>
+</tbody>
+</table>
+<p>Non-comparison sorts
+The following table describes integer sorting algorithms and other sorting algorithms that are not comparison sorts. As such, they are not limited to Ω(n log n)[citation needed]. Complexities below assume n items to be sorted, with keys of size k, digit size d, and r the range of numbers to be sorted. Many of them are based on the assumption that the key size is large enough that all entries have unique key values, and hence that n ≪ 2k, where ≪ means "much less than". In the unit-cost random access machine model, algorithms with running time of {\displaystyle \scriptstyle n\cdot {\frac {k}{d}}}{\displaystyle \scriptstyle n\cdot {\frac {k}{d}}}, such as radix sort, still take time proportional to Θ(n log n), because n is limited to be not more than {\displaystyle 2^{\frac {k}{d}}}2^{\frac {k}{d}}, and a larger number of elements to sort would require a bigger k in order to store them in the memory.[14]</p>
+<p>Non-comparison sorts
+Name     |        Best     |        Average     |        Worst     |        Memory     |        Stable     |        n ≪ 2k     |        Notes
+Pigeonhole sort     |        —     |        {\displaystyle n+2^{k}}n+2^{k}     |        {\displaystyle n+2^{k}}n+2^{k}     |        {\displaystyle 2^{k}}2^{k}     |        Yes     |        Yes     |      <br />
+Bucket sort (uniform keys)     |        —     |        {\displaystyle n+k}n+k     |        {\displaystyle n^{2}\cdot k}n^{2}\cdot k     |        {\displaystyle n\cdot k}n\cdot k     |        Yes     |        No     |        Assumes uniform distribution of elements from the domain in the array.[15]
+Bucket sort (integer keys)     |        —     |        {\displaystyle n+r}n+r     |        {\displaystyle n+r}n+r     |        {\displaystyle n+r}n+r     |        Yes     |        Yes     |        If r is {\displaystyle O(n)}O(n), then average time complexity is {\displaystyle O(n)}O(n).[16]
+Counting sort     |        —     |        {\displaystyle n+r}n+r     |        {\displaystyle n+r}n+r     |        {\displaystyle n+r}n+r     |        Yes     |        Yes     |        If r is {\displaystyle O(n)}O(n), then average time complexity is {\displaystyle O(n)}O(n).[15]
+LSD Radix Sort     |        —     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n+2^{d}}n+2^{d}     |        Yes     |        No     |        ,[15][16] {\displaystyle {\frac {k}{d}}}{\frac {k}{d}} recursion levels, 2d for count array.
+MSD Radix Sort     |        —     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n+2^{d}}n+2^{d}     |        Yes     |        No     |        Stable version uses an external array of size n to hold all of the bins.
+MSD Radix Sort (in-place)     |        —     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle 2^{d}}2^{d}     |        No     |        No     |        d=1 for in-place, {\displaystyle k/1}{\displaystyle k/1} recursion levels, no count array.
+Spreadsort     |        n     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n\cdot \left({{\frac {k}{s}}+d}\right)}n\cdot \left({{\frac {k}{s}}+d}\right)     |        {\displaystyle {\frac {k}{d}}\cdot 2^{d}}{\frac {k}{d}}\cdot 2^{d}     |        No     |        No     |        Asymptotic are based on the assumption that n ≪ 2k, but the algorithm does not require this.
+Burstsort     |        —     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        No     |        No     |        Has better constant factor than radix sort for sorting strings. Though relies somewhat on specifics of commonly encountered strings.
+Flashsort     |        n     |        {\displaystyle n+r}n+r     |        {\displaystyle n^{2}}n^{2}     |        n     |        No     |        No     |        Requires uniform distribution of elements from the domain in the array to run in linear time. If distribution is extremely skewed then it can go quadratic if underlying sort is quadratic (it is usually an insertion sort). In-place version is not stable.
+Postman sort     |        —     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n\cdot {\frac {k}{d}}}n\cdot {\frac {k}{d}}     |        {\displaystyle n+2^{d}}n+2^{d}     |        —     |        No     |        A variation of bucket sort, which works very similar to MSD Radix Sort. Specific to post service needs.
+Samplesort can be used to parallelize any of the non-comparison sorts, by efficiently distributing data into several buckets and then passing down sorting to several processors, with no need to merge as buckets are already sorted between each other.</p>
+<p>Others
+Some algorithms are slow compared to those discussed above, such as the bogosort with unbounded run time and the stooge sort which has O(n2.7) run time. These sorts are usually described for educational purposes in order to demonstrate how run time of algorithms is estimated. The following table describes some sorting algorithms that are impractical for real-life use in traditional software contexts due to extremely poor performance or specialized hardware requirements.</p>
+<p>Name     |        Best     |        Average     |        Worst     |        Memory     |        Stable     |        Comparison     |        Other notes
+Bead sort     |        n     |        S     |        S     |        {\displaystyle n^{2}}n^{2}     |        N/A     |        No     |        Works only with positive integers. Requires specialized hardware for it to run in guaranteed {\displaystyle O(n)}O(n) time. There is a possibility for software implementation, but running time will be {\displaystyle O(S)}{\displaystyle O(S)}, where S is sum of all integers to be sorted, in case of small integers it can be considered to be linear.
+Simple pancake sort     |        —     |        n     |        n     |        {\displaystyle \log n}\log n     |        No     |        Yes     |        Count is number of flips.
+Spaghetti (Poll) sort     |        n     |        n     |        n     |        {\displaystyle n^{2}}n^{2}     |        Yes     |        Polling     |        This is a linear-time, analog algorithm for sorting a sequence of items, requiring O(n) stack space, and the sort is stable. This requires n parallel processors. See spaghetti sort#Analysis.
+Sorting network     |        {\displaystyle \log ^{2}n}\log ^{2}n     |        {\displaystyle \log ^{2}n}\log ^{2}n     |        {\displaystyle \log ^{2}n}\log ^{2}n     |        {\displaystyle n\log ^{2}n}n\log ^{2}n     |        Varies (stable sorting networks require more comparisons)     |        Yes     |        Order of comparisons are set in advance based on a fixed network size. Impractical for more than 32 items.[disputed – discuss]
+Bitonic sorter     |        {\displaystyle \log ^{2}n}\log ^{2}n     |        {\displaystyle \log ^{2}n}\log ^{2}n     |        {\displaystyle \log ^{2}n}\log ^{2}n     |        {\displaystyle n\log ^{2}n}n\log ^{2}n     |        No     |        Yes     |        An effective variation of Sorting networks.
+Bogosort     |        n     |        {\displaystyle (n\times n!)}{\displaystyle (n\times n!)}     |        {\displaystyle \infty }\infty      |        1     |        No     |        Yes     |        Random shuffling. Used for example purposes only, as sorting with unbounded worst case running time.
+Stooge sort     |        {\displaystyle n^{\log 3/\log 1.5}}n^{{\log 3/\log 1.5}}     |        {\displaystyle n^{\log 3/\log 1.5}}n^{{\log 3/\log 1.5}}     |        {\displaystyle n^{\log 3/\log 1.5}}n^{{\log 3/\log 1.5}}     |        n     |        No     |        Yes     |        Slower than most of the sorting algorithms (even naive ones) with a time complexity of O(nlog 3 / log 1.5 ) = O(n2.7095...).
+Theoretical computer scientists have detailed other sorting algorithms that provide better than O(n log n) time complexity assuming additional constraints, including:</p>
+<p>Han's algorithm, a deterministic algorithm for sorting keys from a domain of finite size, taking O(n log log n) time and O(n) space.[17]
+Thorup's algorithm, a randomized algorithm for sorting keys from a domain of finite size, taking O(n log log n) time and O(n) space.[18]
+A randomized integer sorting algorithm taking {\displaystyle O\left(n{\sqrt {\log \log n}}\right)}{\displaystyle O\left(n{\sqrt {\log \log n}}\right)} expected time and O(n) space.[19]</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

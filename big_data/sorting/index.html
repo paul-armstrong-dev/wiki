@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>All Dev Notes</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Sorting - All Dev Notes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,13 +19,13 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -39,26 +39,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">All Dev Notes</a>
+                    <a class="navbar-brand" href="../..">All Dev Notes</a>
                 </div>
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href=".">Home</a>
+                            <li >
+                                <a href="../..">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting overviews <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="sort/shell_sort/">Shell Sort</a>
+    <a href="../../sort/shell_sort/">Shell Sort</a>
 </li>
                                     
 <li >
-    <a href="sort/medium/sorting/">Medium</a>
+    <a href="../../sort/medium/sorting/">Medium</a>
 </li>
                                 </ul>
                             </li>
@@ -67,11 +67,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="user-guide/writing-your-docs.md">Writing your docs</a>
+    <a href="../../user-guide/writing-your-docs.md">Writing your docs</a>
 </li>
                                     
 <li >
-    <a href="user-guide/styling-your-docs.md">Styling your docs</a>
+    <a href="../../user-guide/styling-your-docs.md">Styling your docs</a>
 </li>
                                 </ul>
                             </li>
@@ -80,11 +80,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="about/license.md">License</a>
+    <a href="../../about/license.md">License</a>
 </li>
                                     
 <li >
-    <a href="about/release-notes.md">Release Notes</a>
+    <a href="../../about/release-notes.md">Release Notes</a>
 </li>
                                 </ul>
                             </li>
@@ -96,16 +96,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="disabled">
-                                <a rel="next" >
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="sort/shell_sort/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -114,32 +104,84 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#interviews">Interviews</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h3 id="interviews">Interviews</h3>
-<hr />
-<ol>
-<li><strong>HackerOne</strong>: <ul>
-<li>Take home assignment today</li>
+<p>The techniques of sorting can be divided into two categories. These are:</p>
+<ul>
+<li>Internal Sorting:<ul>
+<li>If all the data that is to be sorted can be adjusted at a time in the main memory, the internal sorting method is being performed.</li>
 </ul>
 </li>
-<li><strong>Toggle</strong>: <ul>
-<li>Interview on 01/11</li>
+<li>
+<p>External Sorting:</p>
+<ul>
+<li>When the data that is to be sorted cannot be accommodated in the memory at the same time and some has to be kept in auxiliary memory such as hard disk, floppy disk, magnetic tapes etc, then external sorting methods are performed.</li>
 </ul>
 </li>
-<li><strong>Ebury</strong>: <ul>
-<li>Interview on 04/11</li>
+<li>
+<p>In data processing, there are various sorting methods and techniques that are not only used for sorting algorithms but are also used for analyzing the performance of other algorithms. In this post, you will find a brief description of the different types of sorting algorithms.</p>
+</li>
+<li>Sorting algorithms can be categorized as</li>
+<li><strong>Simple Sorts</strong>:<ul>
+<li>These types of algorithms are efficient on the small amount of data but cannot handle large data. They are fast and efficient due to low overhead. Two simplest sort algorithms are insertion sort and selection sorts</li>
 </ul>
 </li>
-<li><strong>Upstack</strong>: <ul>
-<li>Technical interview on 06/11</li>
+<li><strong>Effecient Sorts</strong>: <ul>
+<li>Practical sorting algorithms are usually based on algorithms with average time complexity. Some most common of these are merge sort, heap sort, and quicksort.</li>
+<li>These algorithms can be used on large lists and complicated programs but each of them has its own drawbacks and advantages. Some may require additional space or more iterations, thus resulting in more complex algorithms.</li>
+<li>Examples: <ul>
+<li>MergeSort: </li>
+<li>Compares two elements of the list and then swaps them in the order required (ascending or descending).</li>
+<li>It applies the divide and rule concept. </li>
+<li>Merge sort works on sequential access and can work on large lists.<ul>
+<li>This algorithm is popularly used in practical programming as it is used in the sophisticated algorithm Timsort.</li>
+<li>Timsort is used for standard sorting in languages such as Python and Jana. Merge sort algorithm is itself a standard routine in Perl.</li>
 </ul>
 </li>
+<li>Algorithm:<ol>
+<li>Divide the list recursively into two or more sub-problems until it can no more be divided</li>
+<li>Solve the sub-problems until it is reached to the base case</li>
+<li>Merge the smaller lists into the new list in sorted order</li>
 </ol>
-<hr /></div>
+</li>
+<li>HeapSort: <ul>
+<li>An advanced and efficient version of the selection sort algorithm. </li>
+<li>It works similarly by sorting the elements in the ascending or descending order by comparing but this is done by using a data structure called heap, which is a special tree base structure. </li>
+<li>Heap has the following properties:<ul>
+<li>It is a complete tree</li>
+<li>Root has a greater value than any other element in the subtree</li>
+</ul>
+</li>
+<li>Algorithm:<ol>
+<li>Form a heap from the given data</li>
+<li>Remove the largest item from the heap</li>
+<li>From the remaining data reform the heap</li>
+<li>Repeat step 2 and 3 until all the data is over</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>QuickSort: <ul>
+<li>Similar to merge sort which uses divide and conquers technique. </li>
+<li>Recursive algorithm. </li>
+<li>But quicksort performs in a little different manner than mergesort does. </li>
+<li>In merge sort, the work does not happen in the division stage but it happens in the combined stage. </li>
+<li>But in quicksort it is totally opposite, everything happens in the division stage.</li>
+<li>Algorithm:<ol>
+<li>Divide the list by any chosen element and call it a Pivot element. Rearrange the elements, all the elements that are less than equal to the pivot element must be in left and larger ones on the right. This procedure is called Partitioning.</li>
+<li>Conquer which mean recursively ordering the subarrays</li>
+<li>There is nothing left in the combined stage as the conquer stage organizes everything. The smaller or equal elements to the pivot are organized at the left side and larger elements are organized at the right.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
@@ -147,11 +189,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -219,8 +261,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-10-25 12:55:23
--->

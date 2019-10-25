@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
+        
+        <link rel="shortcut icon" href="/img/favicon.ico">
         <title>All Dev Notes</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,13 +19,13 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="/js/jquery-1.10.2.min.js" defer></script>
+        <script src="/js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -39,26 +39,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">All Dev Notes</a>
+                    <a class="navbar-brand" href="/.">All Dev Notes</a>
                 </div>
 
                 <!-- Expanded navigation -->
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href=".">Home</a>
+                            <li >
+                                <a href="/.">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting overviews <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="sort/shell_sort/">Shell Sort</a>
+    <a href="/sort/shell_sort/">Shell Sort</a>
 </li>
                                     
 <li >
-    <a href="sort/medium/sorting/">Medium</a>
+    <a href="/sort/medium/sorting/">Medium</a>
 </li>
                                 </ul>
                             </li>
@@ -67,11 +67,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="user-guide/writing-your-docs.md">Writing your docs</a>
+    <a href="/user-guide/writing-your-docs.md">Writing your docs</a>
 </li>
                                     
 <li >
-    <a href="user-guide/styling-your-docs.md">Styling your docs</a>
+    <a href="/user-guide/styling-your-docs.md">Styling your docs</a>
 </li>
                                 </ul>
                             </li>
@@ -80,11 +80,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="about/license.md">License</a>
+    <a href="/about/license.md">License</a>
 </li>
                                     
 <li >
-    <a href="about/release-notes.md">Release Notes</a>
+    <a href="/about/release-notes.md">Release Notes</a>
 </li>
                                 </ul>
                             </li>
@@ -96,50 +96,21 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="disabled">
-                                <a rel="next" >
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="sort/shell_sort/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#interviews">Interviews</a></li>
-    </ul>
-</div></div>
-                <div class="col-md-9" role="main">
 
-<h3 id="interviews">Interviews</h3>
-<hr />
-<ol>
-<li><strong>HackerOne</strong>: <ul>
-<li>Take home assignment today</li>
-</ul>
-</li>
-<li><strong>Toggle</strong>: <ul>
-<li>Interview on 01/11</li>
-</ul>
-</li>
-<li><strong>Ebury</strong>: <ul>
-<li>Interview on 04/11</li>
-</ul>
-</li>
-<li><strong>Upstack</strong>: <ul>
-<li>Technical interview on 06/11</li>
-</ul>
-</li>
-</ol>
-<hr /></div>
+    <div class="row-fluid">
+      <div id="main-content" class="span12">
+        <h1 id="404-page-not-found" style="text-align: center">404</h1>
+        <p style="text-align: center"><strong>Page not found</strong></p>
+      </div>
+    </div>
+
+
         </div>
 
         <footer class="col-md-12">
@@ -147,11 +118,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "/",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="/js/base.js" defer></script>
+        <script src="/search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -219,8 +190,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-10-25 12:55:23
--->
