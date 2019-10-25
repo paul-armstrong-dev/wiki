@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>rtl-py-coding-standards - All Dev Notes</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">All Dev Notes</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting overviews <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../sort/shell_sort/">Shell Sort</a>
+</li>
+                                    
+<li >
+    <a href="../sort/medium/sorting/">Medium</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../user-guide/writing-your-docs.md">Writing your docs</a>
+</li>
+                                    
+<li >
+    <a href="../user-guide/styling-your-docs.md">Styling your docs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../about/license.md">License</a>
+</li>
+                                    
+<li >
+    <a href="../about/release-notes.md">Release Notes</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#rtl-py-coding-standards">rtl-py-coding-standards</a></li>
+            <li><a href="#values">Values</a></li>
+            <li><a href="#general-development-guidelines">General Development Guidelines</a></li>
+            <li><a href="#in-particular">In Particular</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="rtl-py-coding-standards">rtl-py-coding-standards</h1>
+<p>Centralized location for all RTL-python coding standards. </p>
+<h3 id="values">Values</h3>
+<ul>
+<li><strong>"Build tools for others that you want to be built for you." - Kenneth Reitz</strong></li>
+<li>"Simplicity is alway better than functionality." - Pieter Hintjens</li>
+<li>"Fit the 90% use-case. Ignore the nay sayers." - Kenneth Reitz</li>
+<li>"Beautiful is better than ugly." - [PEP 20]</li>
+<li><strong>Use the case that handles every case.</strong> (summary of google docs) </li>
+<li><strong>Single Object Responsibility</strong></li>
+</ul>
+<h3 id="general-development-guidelines">General Development Guidelines</h3>
+<ul>
+<li>"Explicit is better than implicit" - [PEP 20]</li>
+<li>"Readability counts." - [PEP 20]</li>
+<li>"Anybody can fix anything." - [Khan Academy Development Docs]</li>
+<li>Fix each <a href="http://www.artima.com/intv/fixit2.html">broken window</a> (bad design, wrong decision, or poor code) <em>as soon as it is discovered</em>.</li>
+<li>"Now is better than never." - [PEP 20]</li>
+<li>Test ruthlessly. Write docs for new features.</li>
+<li>Even more important that Test-Driven Development--<em>Human-Driven Development</em></li>
+<li>These guidelines may--and probably will--change.</li>
+</ul>
+<h2 id="in-particular">In Particular</h2>
+<h3 id="style">Style</h3>
+<ul>
+<li>Follow [PEP 8], when sensible.</li>
+<li>Use f-strings for format if on python3.6&gt; from - <a href="https://www.python.org/dev/peps/pep-0498/">pep498</a></li>
+<li>Max line length of 100 </li>
+<li>Double quotes for ALL strings (handles every case) from - <a href="https://google.github.io/styleguide/pyguide.html">GoogleStyle</a></li>
+<li>Follow single object responsibility as strictly as possible, </li>
+<li>Encapsulate operations into well named functions.</li>
+<li>Follow sonarcube max logical complexity limit per function (no functions with more than 15 operations)   </li>
+</ul>
+<h4 id="naming">Naming</h4>
+<ul>
+<li>Variables, functions, methods, packages, modules<ul>
+<li><code>lower_case_with_underscores</code></li>
+</ul>
+</li>
+<li>Classes and Exceptions<ul>
+<li><code>CapWords</code></li>
+</ul>
+</li>
+<li>Protected methods and internal functions<ul>
+<li><code>_single_leading_underscore(self, ...)</code></li>
+</ul>
+</li>
+<li>Private methods<ul>
+<li><code>__double_leading_underscore(self, ...)</code></li>
+</ul>
+</li>
+<li>Constants<ul>
+<li><code>ALL_CAPS_WITH_UNDERSCORES</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="general-naming-guidelines">General Naming Guidelines</h5>
+<p>Avoid one-letter variables (esp. <code>l</code>, <code>O</code>, <code>I</code>). </p>
+<p>Ideally name functions as verbosely as possible 
+According to their function ie: </p>
+<pre><code> def main(self):
+    """
+    Main function for the daily process
+    :return:
+    """
+    df = self.prepare_data(self.open_file())
+    self.save_file(df=df, location="local")
+    self.delete_from_sql()
+    self.write_to_sql(dataframe=df)
+    self.archive_file()
+    self.create_view()
+    exit(0)
+</code></pre>
+<hr />
+<p><strong><em>Exceptions</em></strong>: In very short blocks, when the meaning is clearly visible from the immediate context
+Ideally do not use excepts where possible, try actually handle the error through testing and correcting code.</p>
+<p><strong>Never except Exception</strong></p>
+<hr />
+<p><strong>Avoid redundant labeling.</strong></p>
+<p><strong>Yes</strong></p>
+<pre><code class="python">import audio
+
+core = audio.Core()
+controller = audio.Controller()
+</code></pre>
+
+<p><strong>No</strong></p>
+<pre><code class="python">import audio
+
+core = audio.AudioCore()
+controller = audio.AudioController()
+</code></pre>
+
+<hr />
+<p><strong>Prefer "reverse notation".</strong></p>
+<p><strong>Yes</strong></p>
+<pre><code class="python">elements = ...
+elements_active = ...
+elements_defunct = ...
+</code></pre>
+
+<p><strong>No</strong></p>
+<pre><code class="python">elements = ...
+active_elements = ...
+defunct_elements ...
+</code></pre>
+
+<hr />
+<p><strong>Avoid getter and setter methods.</strong></p>
+<p><strong>Yes</strong></p>
+<pre><code class="python">person.age = 42
+</code></pre>
+
+<p><strong>No</strong></p>
+<pre><code class="python">person.set_age(42)
+</code></pre>
+
+<h4 id="indentation">Indentation</h4>
+<p>Use 4 spaces--never tabs. Enough said.</p>
+<h5 id="line-length">Line Length</h5>
+<ul>
+<li>80 seems too strict so can compromise at 100</li>
+<li>Ideally configure IDE to warn on this</li>
+</ul>
+<h4 id="imports">Imports</h4>
+<p>Import entire modules instead of individual symbols within a module. For example, for a top-level module <code>canteen</code> that has a file <code>canteen/sessions.py</code>,</p>
+<p><strong>Yes</strong></p>
+<pre><code class="python">import canteen
+import canteen.sessions
+from canteen import sessions
+</code></pre>
+
+<p><strong>No</strong></p>
+<pre><code class="python">from canteen import get_user  # Symbol from canteen/__init__.py
+from canteen.sessions import get_session  # Symbol from canteen/sessions.py
+</code></pre>
+
+<p><em>Exception</em>: For third-party code where documentation explicitly says to import individual symbols.</p>
+<p><em>Rationale</em>: Avoids circular imports. See <a href="https://sites.google.com/a/khanacademy.org/forge/for-developers/styleguide/python#TOC-Imports">here</a>.</p>
+<p>Put all imports at the top of the page with three sections, each separated by a blank line, in this order:</p>
+<ol>
+<li>System imports</li>
+<li>Third-party imports</li>
+<li>Local source tree imports</li>
+</ol>
+<p><em>Rationale</em>: Makes it clear where each module is coming from.</p>
+<p><a href="https://www.python.org/dev/peps/pep-0008/#imports">https://www.python.org/dev/peps/pep-0008/#imports</a></p>
+<p>--</p>
+<h4 id="rtl-specfics">Rtl Specfics</h4>
+<h5 id="environment-variables">Environment variables</h5>
+<p>Would like to (likely more feasible once we have vault)</p>
+<pre><code>Standardise environment variables(along with the names) (eg: 
+       sql_user = os.environ['MSSQL_USER']
+        sql_password = os.environ['MSSQL_PASSWORD']
+        sql_server = os.environ['MSSQL_SERVER_IP']
+        sql_port = os.environ['MSSQL_PORT']
+        sql_db = os.environ['MSSQL_DB']
+</code></pre>
+<p>--
+    Similary, if possible, would like to standardize date variables and how they are handled, 
+        - Likely the easiest option for receiving functions is to have start_date and end_date
+        any time we use a date. So run(start_date="", end_date="") 
+        - But would also like to see with regards to days back etc, 
+        I know this is used a lot on SQL especially and would like them to be handled in the same 
+        Way, so days_back = start_date end_date, but not startdate = days_back(-day) </p>
+<p><a href="https://dateutil.readthedocs.io/en/stable/relativedelta.html">https://dateutil.readthedocs.io/en/stable/relativedelta.html</a></p>
+<h5 id="logging">logging</h5>
+<ul>
+<li><a href="https://github.com/Delgan/loguru">https://github.com/Delgan/loguru</a></li>
+</ul>
+<h5 id="templating">templating</h5>
+<ul>
+<li><a href="https://github.com/cookiecutter/cookiecutter">https://github.com/cookiecutter/cookiecutter</a></li>
+<li>Provide some simple examples on the above</li>
+<li>Class template</li>
+</ul>
+<h5 id="pycharm-settings-repo">pycharm settings repo?</h5>
+<ul>
+<li>To be discusses</li>
+</ul>
+<h5 id="requirements">requirements</h5>
+<p>Needs to be in the repo, <strong><em>and versioned</em></strong>.</p>
+<p>Steps to create correctly, everytime.</p>
+<ol>
+<li>create venv for repo as start of work</li>
+<li>Do pip &gt; requirements.txt before checking in repo</li>
+<li>Checkin requirements.txt</li>
+</ol>
+<p>--  </p>
+<h4 id="notes-on-performance">Notes on performance:</h4>
+<h4 id="list-comprehension">List Comprehension</h4>
+<p>List comprehensions should only be used when actually storing the output of the list comprehension, 
+If you are modifying a list or dict rather use the traditional syntax:
+    <code>for x in y:
+          x=x+1</code></p>
+<h4 id="numpy">Numpy</h4>
+<p>There’s a couple of points we can follow when looking to speed things up:
+- If there’s a for-loop over an array, there’s a good chance 
+  we can replace it with some built-in Numpy function
+- If we see any type of math, there’s a good chance 
+  we can replace it with some built-in Numpy function</p>
+<p><a href="https://towardsdatascience.com/one-simple-trick-for-speeding-up-your-python-code-with-numpy-1afc846db418">https://towardsdatascience.com/one-simple-trick-for-speeding-up-your-python-code-with-numpy-1afc846db418</a>
+<a href="https://www.datacamp.com/courses/writing-efficient-python-code">https://www.datacamp.com/courses/writing-efficient-python-code</a></p>
+<p>--</p>
+<h4 id="env-files">. env files</h4>
+<p>Always close values in "", can handle every variable type</p>
+<p>--</p>
+<h4 id="repo-naming-conventions">Repo naming conventions:</h4>
+<p>gateway_lambda_vod-exitlogs/</p>
+<h4 id="useful-docs-further-reading">Useful docs &amp; further reading:</h4>
+<ul>
+<li><a href="https://github.com/joshnh/Git-Commands">https://github.com/joshnh/Git-Commands</a></li>
+<li><a href="https://12factor.net/">https://12factor.net/</a></li>
+</ul>
+<h4 id="sources">Sources</h4>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0008/#imports">https://www.python.org/dev/peps/pep-0008/#imports</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0498/">https://www.python.org/dev/peps/pep-0498/</a></li>
+<li><a href="https://google.github.io/styleguide/pyguide.html">https://google.github.io/styleguide/pyguide.html</a></li>
+<li><a href="http://www.moderndescartes.com/essays/python_list_comprehensions/index.html">http://www.moderndescartes.com/essays/python_list_comprehensions/index.html</a></li>
+<li><a href="https://medium.com/@collectiveacuity/argparse-vs-click-227f53f023dc">https://medium.com/@collectiveacuity/argparse-vs-click-227f53f023dc</a></li>
+<li><a href="https://github.com/reddit-archive/reddit/wiki/PythonImportGuidelines">https://github.com/reddit-archive/reddit/wiki/PythonImportGuidelines</a></li>
+<li><a href="https://code.google.com/archive/p/soc/wikis/PythonStyleGuide.wiki">https://code.google.com/archive/p/soc/wikis/PythonStyleGuide.wiki</a></li>
+<li><a href="https://docs.openstack.org/hacking/latest/">https://docs.openstack.org/hacking/latest/</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0008/">https://www.python.org/dev/peps/pep-0008/</a> </li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
